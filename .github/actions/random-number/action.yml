@@ -8,5 +8,7 @@ runs:
   using: "composite"
   steps:
     - id: generate
-      run: echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
+      run: |
+        echo "Generating a random number..."
+        echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
       shell: bash

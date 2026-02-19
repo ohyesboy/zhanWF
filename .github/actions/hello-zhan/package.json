@@ -1,0 +1,18 @@
+{
+  "name": "hello-zhan-action",
+  "version": "1.0.0",
+  "description": "A TypeScript action that says hello to Zhan",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}
