@@ -1,0 +1,12 @@
+name: 'Random Number Generator'
+description: 'Generates a random number'
+outputs:
+  RND_NUM:
+    description: "The generated random number"
+    value: ${{ steps.generate.outputs.RND_NUM }}
+runs:
+  using: "composite"
+  steps:
+    - id: generate
+      run: echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
+      shell: bash

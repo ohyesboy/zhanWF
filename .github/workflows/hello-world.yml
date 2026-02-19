@@ -9,8 +9,9 @@ jobs:
     outputs:
       rnd_num: ${{ steps.gen.outputs.RND_NUM }}
     steps:
+      - uses: actions/checkout@v4
       - id: gen
-        run: echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
+        uses: ./.github/actions/random-number
 
   hello-world:
     needs: generate-number
