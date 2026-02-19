@@ -4,8 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  generate-number:
+    runs-on: ubuntu-latest
+    outputs:
+      rnd_num: ${{ steps.gen.outputs.RND_NUM }}
+    steps:
+      - id: gen
+        run: echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
+
   hello-world:
+    needs: generate-number
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello World
-        run: echo "Hello World"
+        run: echo "Hello World, random number is ${{ needs.generate-number.outputs.rnd_num }}"
