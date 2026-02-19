@@ -27,8 +27,3 @@ jobs:
         run: echo "Hello World, random number is ${{ needs.generate-number.outputs.rnd_num }}"
       - name: Save random number to file
         run: echo "${{ needs.generate-number.outputs.rnd_num }}" > rnd_num.txt
-      - name: Upload random number artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: random-number
-          path: rnd_num.txt

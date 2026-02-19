@@ -9,6 +9,6 @@ runs:
   steps:
     - id: generate
       run: |
-        echo "Generating a random number..."
-        echo "RND_NUM=$RANDOM" >> $GITHUB_OUTPUT
-      shell: bash
+        Write-Host "Generating a random number..."
+        "RND_NUM=$(Get-Random)" >> $env:GITHUB_OUTPUT
+      shell: pwsh
