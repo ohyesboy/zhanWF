@@ -4,7 +4,7 @@
   "description": "A TypeScript action that says hello to Zhan",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build src/index.ts -o dist --minify",
     "format": "prettier --write '**/*.ts'",
     "lint": "eslint src/**/*.ts"
   },
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
+    "@vercel/ncc": "^0.38.4",
     "typescript": "^5.3.3"
   }
 }
