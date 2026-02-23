@@ -1,0 +1,26 @@
+{
+  "name": "zhanwf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohyesboy/zhanWF.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohyesboy/zhanWF/issues"
+  },
+  "homepage": "https://github.com/ohyesboy/zhanWF#readme",
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "docx": "^9.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
