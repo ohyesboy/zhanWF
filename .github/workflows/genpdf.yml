@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Generate Docx
-        run: npx ts-node tools/create_docx.ts
+        run: npx ts-node-esm tools/create_docx.ts
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
