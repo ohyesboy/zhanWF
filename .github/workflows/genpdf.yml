@@ -1,0 +1,30 @@
+name: Generate Docx (from genpdf.yml)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-docx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Docx
+        run: npx ts-node tools/create_docx.ts
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-docx
+          path: hello.docx
